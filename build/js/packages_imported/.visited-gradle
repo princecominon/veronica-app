@@ -1,0 +1,57 @@
+{
+  "version": "9",
+  "items": {
+    "cd71f817016025db97c289e0f6cf892b": {
+      "src": "C:\\Users\\91942\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-stdlib-js\\2.4.10\\cf6bff923d8fc2fefac01e83631ffc903f3bf819\\kotlin-stdlib-js-2.4.10.klib"
+    },
+    "003da13253428179dfee2d100380bdc4": {
+      "src": "C:\\Users\\91942\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-dom-api-compat\\2.4.10\\f27924baa5adc795bc8f53796282ddf0af6f5c4d\\kotlin-dom-api-compat-2.4.10.klib"
+    },
+    "19bd13ec0e2f73d00321cadc43cf8cb2": {
+      "src": "C:\\Users\\91942\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-react-js\\2026.9.0-19.2.8\\4798490c38957e705e4f1bb1545ce6f855a9dbf3\\kotlin-react-js-2026.9.0-19.2.8.klib",
+      "target": "kotlin-react\\2026.9.0-19.2.8"
+    },
+    "6d8228e6d6a287621b25598c01e59600": {
+      "src": "C:\\Users\\91942\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-browser-js\\2026.9.0\\5ad66f4c846a19ebf49404c1334056dc94fe570f\\kotlin-browser-js-2026.9.0.klib"
+    },
+    "cff713c4cab215f7d897f7dc55149cbf": {
+      "src": "C:\\Users\\91942\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-js-js\\2026.9.0\\62039aafa7e020cc77b271df2e7338612370d5cd\\kotlin-js-js-2026.9.0.klib"
+    },
+    "83a97ab869365ad3b75704fa260c1ae9": {
+      "src": "C:\\Users\\91942\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-js-core-js\\2026.9.0\\8b337168667e4dd224ed89dd6aaba8ab2ec88989\\kotlin-js-core-js-2026.9.0.klib"
+    },
+    "fd45b858d213aa8bae378d9cdc9ec272": {
+      "src": "C:\\Users\\91942\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-js-plain-objects\\2.4.10\\b61e876495739dbde417767e5fd9f98aaa55f867\\kotlin-js-plain-objects-2.4.10.klib"
+    },
+    "28dc77fc4504f224cc181d8a530cdd38": {
+      "src": "C:\\Users\\91942\\.gradle\\caches\\modules-2\\files-2.1\\io.github.turansky.seskar\\seskar-core-js\\4.64.0\\6ae1bea9ad58cceaa14f8042ae6a4e92facb0340\\seskar-core-js-4.64.0.klib"
+    },
+    "c88d4b5895617ccbfd3f8cf74db7df87": {
+      "src": "C:\\Users\\91942\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-js-plain-object-js\\2026.9.0\\6cc08a34818f42a59b7a56cf142fbcab55d005fd\\kotlin-js-plain-object-js-2026.9.0.klib"
+    },
+    "19155ba32c3ea0c9912a3a46a86706eb": {
+      "src": "C:\\Users\\91942\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlinx\\kotlinx-coroutines-core-js\\1.11.0\\20e1b63e6163ea5f6eb6524057d3c73f5e80e5ac\\kotlinx-coroutines-core-js-1.11.0.klib"
+    },
+    "2dc9c25edd85baaf840c789dfccbf34b": {
+      "src": "C:\\Users\\91942\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlinx\\atomicfu-js\\0.32.1\\32d10e41f39ffa72a4d455bd2e9a9a6e70fd90a4\\atomicfu-js-0.32.1.klib"
+    },
+    "eeefde80ed849fbbb34564f919457b2d": {
+      "src": "C:\\Users\\91942\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-cssom-core-js\\2026.9.0\\84e738c016ad00a4e14a2bf72728eb0c9a218b3d\\kotlin-cssom-core-js-2026.9.0.klib",
+      "target": "kotlin-cssom-core\\2026.9.0"
+    },
+    "0345c96cec990123ba1c2a45434d221f": {
+      "src": "C:\\Users\\91942\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-web-js\\2026.9.0\\1a0baf040de690c092bb688e61c5ea5dff900b58\\kotlin-web-js-2026.9.0.klib"
+    },
+    "c4b7bc764b7b78163271404bfedba3fd": {
+      "src": "C:\\Users\\91942\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-csstype-js\\2026.9.0-3.2.3\\45c1f60d203ad281c05839fac85a6c239a4c9556\\kotlin-csstype-js-2026.9.0-3.2.3.klib",
+      "target": "kotlin-csstype\\2026.9.0-3.2.3"
+    },
+    "40f76c6823e9b7774c34cc000c975f0b": {
+      "src": "C:\\Users\\91942\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-react-dom-js\\2026.9.0-19.2.8\\f00d433668ea6ae49d3a7c33eb614386fbb6bfe\\kotlin-react-dom-js-2026.9.0-19.2.8.klib",
+      "target": "kotlin-react-dom\\2026.9.0-19.2.8"
+    },
+    "6691bd4d13b2b8780c20782a79daa004": {
+      "src": "C:\\Users\\91942\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlinx\\kotlinx-browser-js\\0.5.0\\a4fafe363554c7fb812df4eecc959a8d7c1b12eb\\kotlinx-browser-js-0.5.0.klib"
+    }
+  }
+}

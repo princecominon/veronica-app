@@ -1,0 +1,13 @@
+{
+  "name": "kotlin-react-dom",
+  "version": "2026.9.0-19.2.8",
+  "main": "kotlin-react-dom.mjs",
+  "devDependencies": {},
+  "dependencies": {
+    "react-dom": "^19.2.8",
+    "react": "^19.2.8"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
+}
