@@ -1,0 +1,6 @@
+# Ignore API keys and secrets
+.env
+
+# Ignore Gradle build folders
+build/
+.gradle/
