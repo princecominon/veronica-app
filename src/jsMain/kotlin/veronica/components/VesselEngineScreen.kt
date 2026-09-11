@@ -840,10 +840,10 @@ val VesselEngineScreen = FC<VesselEngineScreenProps> { props ->
                 if (vesselData != null) {
                     div {
                         className = ClassName("p-6 rounded-2xl bg-[#0c1130]/90 backdrop-blur-md border border-[#3b5bfe]/30 text-left w-full max-w-2xl mx-auto")
-
-                        val positionData = vesselData.vesselPosition
-
-                        val vName = positionData?.vessel_name?.toString() ?: "Unknown Vessel"
+                        
+                        val positionData = vesselData.vesselPosition ?: (if (js("Array.isArray(vesselData)") as Boolean) vesselData[0] else vesselData)
+                        
+                        val vName = positionData?.vessel_name?.toString() ?: positionData?.name?.toString() ?: "Unknown Vessel"
                         val imo = positionData?.imo?.toString() ?: "N/A"
                         val mmsi = positionData?.mmsi?.toString() ?: "N/A"
                         val lat = positionData?.latitude?.toString() ?: "0.0"
@@ -854,9 +854,8 @@ val VesselEngineScreen = FC<VesselEngineScreenProps> { props ->
                         val heading = positionData?.heading?.toString() ?: "0"
                         val speed = positionData?.sog?.toString() ?: "0.0"
                         val glitch = positionData?.suspected_glitch?.toString() ?: "false"
-
                         val rawStatus = positionData?.nav_status as? Number
-
+                        
                         val vStatus = when (rawStatus?.toInt()) {
                             0 -> "Under way using engine"
                             1 -> "At anchor"
@@ -866,30 +865,22 @@ val VesselEngineScreen = FC<VesselEngineScreenProps> { props ->
                             null -> "Unknown"
                             else -> "Status Code: $rawStatus"
                         }
-
-                        div {
-                            className = ClassName("flex flex-col sm:flex-row sm:items-end justify-between border-b border-[#3b5bfe]/20 pb-4 mb-5")
-
-                            h3 {
-                                className = ClassName("text-2xl font-bold text-white")
-                                +vName
-                            }
-                            span {
-                                className = ClassName("text-[#6d8bff] text-sm mt-2 sm:mt-0")
-                                +"Status: $vStatus"
-                            }
-                        }
-
+                        
                         val vesselClass = positionData?.vessel_class?.toString() ?: "Panamax"
                         val dwt = positionData?.dwt?.toString() ?: "82,000 mt"
                         val loa = positionData?.loa?.toString() ?: "229m"
                         val beam = positionData?.beam?.toString() ?: "32m"
                         val capacity = positionData?.cargo_capacity?.toString() ?: "4,500 TEU"
-
                         val fuelCons = positionData?.fuel_consumption?.toString() ?: "35 mt/day"
                         val estFreight = positionData?.est_freight?.toString() ?: "$4,120 / TEU"
                         val portCompat = positionData?.port_compatibility?.toString() ?: "Verified (Draft OK)"
-
+                        
+                        val formattedTimestamp = if (timestamp != "N/A" && timestamp.contains("T")) {
+                            timestamp.substringBefore("T") + " " + timestamp.substringAfter("T").substringBefore("Z")
+                        } else {
+                            timestamp
+                        }
+                        
                         val details = listOf(
                             "Vessel Class" to vesselClass,
                             "IMO Number" to imo,
@@ -903,12 +894,23 @@ val VesselEngineScreen = FC<VesselEngineScreenProps> { props ->
                             "Est. Fuel Cons." to fuelCons,
                             "Port Compatibility" to portCompat,
                             "Est. Freight Cost" to estFreight,
-                            "Last Signal" to (timestamp.substringBefore("T") + " " + timestamp.substringAfter("T").substringBefore("Z"))
+                            "Last Signal" to formattedTimestamp
                         )
-
+                        
+                        div {
+                            className = ClassName("flex flex-col sm:flex-row sm:items-end justify-between border-b border-[#3b5bfe]/20 pb-4 mb-5")
+                            h3 {
+                                className = ClassName("text-2xl font-bold text-white")
+                                +vName
+                            }
+                            span {
+                                className = ClassName("text-[#6d8bff] text-sm mt-2 sm:mt-0")
+                                +"Status: $vStatus"
+                            }
+                        }
+                        
                         div {
                             className = ClassName("grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-y-6 gap-x-4")
-
                             details.forEach { (label, value) ->
                                 div {
                                     key = Key(label)

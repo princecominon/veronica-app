@@ -26124,42 +26124,64 @@
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
       $this$div.className = 'p-6 rounded-2xl bg-[#0c1130]/90 backdrop-blur-md border border-[#3b5bfe]/30 text-left w-full max-w-2xl mx-auto';
-      var positionData = $vesselData.vesselPosition;
-      var tmp1_safe_receiver = positionData == null ? null : positionData.vessel_name;
-      var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : toString(tmp1_safe_receiver);
-      var vName = tmp2_elvis_lhs == null ? 'Unknown Vessel' : tmp2_elvis_lhs;
-      var tmp4_safe_receiver = positionData == null ? null : positionData.imo;
-      var tmp5_elvis_lhs = tmp4_safe_receiver == null ? null : toString(tmp4_safe_receiver);
-      var imo = tmp5_elvis_lhs == null ? 'N/A' : tmp5_elvis_lhs;
-      var tmp7_safe_receiver = positionData == null ? null : positionData.mmsi;
-      var tmp8_elvis_lhs = tmp7_safe_receiver == null ? null : toString(tmp7_safe_receiver);
-      var mmsi = tmp8_elvis_lhs == null ? 'N/A' : tmp8_elvis_lhs;
-      var tmp10_safe_receiver = positionData == null ? null : positionData.latitude;
-      var tmp11_elvis_lhs = tmp10_safe_receiver == null ? null : toString(tmp10_safe_receiver);
-      var lat = tmp11_elvis_lhs == null ? '0.0' : tmp11_elvis_lhs;
-      var tmp13_safe_receiver = positionData == null ? null : positionData.longitude;
-      var tmp14_elvis_lhs = tmp13_safe_receiver == null ? null : toString(tmp13_safe_receiver);
-      var lon = tmp14_elvis_lhs == null ? '0.0' : tmp14_elvis_lhs;
-      var tmp16_safe_receiver = positionData == null ? null : positionData.timestamp;
-      var tmp17_elvis_lhs = tmp16_safe_receiver == null ? null : toString(tmp16_safe_receiver);
-      var timestamp = tmp17_elvis_lhs == null ? 'N/A' : tmp17_elvis_lhs;
-      var tmp19_safe_receiver = positionData == null ? null : positionData.processed_timestamp;
-      var tmp20_elvis_lhs = tmp19_safe_receiver == null ? null : toString(tmp19_safe_receiver);
-      var processedTime = tmp20_elvis_lhs == null ? 'N/A' : tmp20_elvis_lhs;
-      var tmp22_safe_receiver = positionData == null ? null : positionData.cog;
-      var tmp23_elvis_lhs = tmp22_safe_receiver == null ? null : toString(tmp22_safe_receiver);
-      var cog = tmp23_elvis_lhs == null ? '0' : tmp23_elvis_lhs;
-      var tmp25_safe_receiver = positionData == null ? null : positionData.heading;
-      var tmp26_elvis_lhs = tmp25_safe_receiver == null ? null : toString(tmp25_safe_receiver);
-      var heading = tmp26_elvis_lhs == null ? '0' : tmp26_elvis_lhs;
-      var tmp28_safe_receiver = positionData == null ? null : positionData.sog;
-      var tmp29_elvis_lhs = tmp28_safe_receiver == null ? null : toString(tmp28_safe_receiver);
-      var speed = tmp29_elvis_lhs == null ? '0.0' : tmp29_elvis_lhs;
-      var tmp31_safe_receiver = positionData == null ? null : positionData.suspected_glitch;
-      var tmp32_elvis_lhs = tmp31_safe_receiver == null ? null : toString(tmp31_safe_receiver);
-      var glitch = tmp32_elvis_lhs == null ? 'false' : tmp32_elvis_lhs;
-      var tmp = positionData == null ? null : positionData.nav_status;
-      var rawStatus = isNumber(tmp) ? tmp : null;
+      var tmp0_elvis_lhs = $vesselData.vesselPosition;
+      var tmp;
+      if (tmp0_elvis_lhs == null) {
+        var tmp_0;
+        var tmp_1 = Array.isArray($vesselData);
+        if ((!(tmp_1 == null) ? typeof tmp_1 === 'boolean' : false) ? tmp_1 : THROW_CCE()) {
+          tmp_0 = $vesselData[0];
+        } else {
+          tmp_0 = $vesselData;
+        }
+        tmp = tmp_0;
+      } else {
+        tmp = tmp0_elvis_lhs;
+      }
+      var positionData = tmp;
+      var tmp2_safe_receiver = positionData == null ? null : positionData.vessel_name;
+      var tmp3_elvis_lhs = tmp2_safe_receiver == null ? null : toString(tmp2_safe_receiver);
+      var tmp_2;
+      if (tmp3_elvis_lhs == null) {
+        var tmp5_safe_receiver = positionData == null ? null : positionData.name;
+        tmp_2 = tmp5_safe_receiver == null ? null : toString(tmp5_safe_receiver);
+      } else {
+        tmp_2 = tmp3_elvis_lhs;
+      }
+      var tmp6_elvis_lhs = tmp_2;
+      var vName = tmp6_elvis_lhs == null ? 'Unknown Vessel' : tmp6_elvis_lhs;
+      var tmp8_safe_receiver = positionData == null ? null : positionData.imo;
+      var tmp9_elvis_lhs = tmp8_safe_receiver == null ? null : toString(tmp8_safe_receiver);
+      var imo = tmp9_elvis_lhs == null ? 'N/A' : tmp9_elvis_lhs;
+      var tmp11_safe_receiver = positionData == null ? null : positionData.mmsi;
+      var tmp12_elvis_lhs = tmp11_safe_receiver == null ? null : toString(tmp11_safe_receiver);
+      var mmsi = tmp12_elvis_lhs == null ? 'N/A' : tmp12_elvis_lhs;
+      var tmp14_safe_receiver = positionData == null ? null : positionData.latitude;
+      var tmp15_elvis_lhs = tmp14_safe_receiver == null ? null : toString(tmp14_safe_receiver);
+      var lat = tmp15_elvis_lhs == null ? '0.0' : tmp15_elvis_lhs;
+      var tmp17_safe_receiver = positionData == null ? null : positionData.longitude;
+      var tmp18_elvis_lhs = tmp17_safe_receiver == null ? null : toString(tmp17_safe_receiver);
+      var lon = tmp18_elvis_lhs == null ? '0.0' : tmp18_elvis_lhs;
+      var tmp20_safe_receiver = positionData == null ? null : positionData.timestamp;
+      var tmp21_elvis_lhs = tmp20_safe_receiver == null ? null : toString(tmp20_safe_receiver);
+      var timestamp = tmp21_elvis_lhs == null ? 'N/A' : tmp21_elvis_lhs;
+      var tmp23_safe_receiver = positionData == null ? null : positionData.processed_timestamp;
+      var tmp24_elvis_lhs = tmp23_safe_receiver == null ? null : toString(tmp23_safe_receiver);
+      var processedTime = tmp24_elvis_lhs == null ? 'N/A' : tmp24_elvis_lhs;
+      var tmp26_safe_receiver = positionData == null ? null : positionData.cog;
+      var tmp27_elvis_lhs = tmp26_safe_receiver == null ? null : toString(tmp26_safe_receiver);
+      var cog = tmp27_elvis_lhs == null ? '0' : tmp27_elvis_lhs;
+      var tmp29_safe_receiver = positionData == null ? null : positionData.heading;
+      var tmp30_elvis_lhs = tmp29_safe_receiver == null ? null : toString(tmp29_safe_receiver);
+      var heading = tmp30_elvis_lhs == null ? '0' : tmp30_elvis_lhs;
+      var tmp32_safe_receiver = positionData == null ? null : positionData.sog;
+      var tmp33_elvis_lhs = tmp32_safe_receiver == null ? null : toString(tmp32_safe_receiver);
+      var speed = tmp33_elvis_lhs == null ? '0.0' : tmp33_elvis_lhs;
+      var tmp35_safe_receiver = positionData == null ? null : positionData.suspected_glitch;
+      var tmp36_elvis_lhs = tmp35_safe_receiver == null ? null : toString(tmp35_safe_receiver);
+      var glitch = tmp36_elvis_lhs == null ? 'false' : tmp36_elvis_lhs;
+      var tmp_3 = positionData == null ? null : positionData.nav_status;
+      var rawStatus = isNumber(tmp_3) ? tmp_3 : null;
       var vStatus;
       switch (rawStatus == null ? null : numberToInt(rawStatus)) {
         case 0:
@@ -26184,6 +26206,38 @@
           vStatus = 'Status Code: ' + toString(rawStatus);
           break;
       }
+      var tmp41_safe_receiver = positionData == null ? null : positionData.vessel_class;
+      var tmp42_elvis_lhs = tmp41_safe_receiver == null ? null : toString(tmp41_safe_receiver);
+      var vesselClass = tmp42_elvis_lhs == null ? 'Panamax' : tmp42_elvis_lhs;
+      var tmp44_safe_receiver = positionData == null ? null : positionData.dwt;
+      var tmp45_elvis_lhs = tmp44_safe_receiver == null ? null : toString(tmp44_safe_receiver);
+      var dwt = tmp45_elvis_lhs == null ? '82,000 mt' : tmp45_elvis_lhs;
+      var tmp47_safe_receiver = positionData == null ? null : positionData.loa;
+      var tmp48_elvis_lhs = tmp47_safe_receiver == null ? null : toString(tmp47_safe_receiver);
+      var loa = tmp48_elvis_lhs == null ? '229m' : tmp48_elvis_lhs;
+      var tmp50_safe_receiver = positionData == null ? null : positionData.beam;
+      var tmp51_elvis_lhs = tmp50_safe_receiver == null ? null : toString(tmp50_safe_receiver);
+      var beam = tmp51_elvis_lhs == null ? '32m' : tmp51_elvis_lhs;
+      var tmp53_safe_receiver = positionData == null ? null : positionData.cargo_capacity;
+      var tmp54_elvis_lhs = tmp53_safe_receiver == null ? null : toString(tmp53_safe_receiver);
+      var capacity = tmp54_elvis_lhs == null ? '4,500 TEU' : tmp54_elvis_lhs;
+      var tmp56_safe_receiver = positionData == null ? null : positionData.fuel_consumption;
+      var tmp57_elvis_lhs = tmp56_safe_receiver == null ? null : toString(tmp56_safe_receiver);
+      var fuelCons = tmp57_elvis_lhs == null ? '35 mt/day' : tmp57_elvis_lhs;
+      var tmp59_safe_receiver = positionData == null ? null : positionData.est_freight;
+      var tmp60_elvis_lhs = tmp59_safe_receiver == null ? null : toString(tmp59_safe_receiver);
+      var estFreight = tmp60_elvis_lhs == null ? '$4,120 / TEU' : tmp60_elvis_lhs;
+      var tmp62_safe_receiver = positionData == null ? null : positionData.port_compatibility;
+      var tmp63_elvis_lhs = tmp62_safe_receiver == null ? null : toString(tmp62_safe_receiver);
+      var portCompat = tmp63_elvis_lhs == null ? 'Verified (Draft OK)' : tmp63_elvis_lhs;
+      var tmp_4;
+      if (!(timestamp === 'N/A') && contains(timestamp, 'T')) {
+        tmp_4 = substringBefore(timestamp, 'T') + ' ' + substringBefore(substringAfter(timestamp, 'T'), 'Z');
+      } else {
+        tmp_4 = timestamp;
+      }
+      var formattedTimestamp = tmp_4;
+      var details = listOf([to('Vessel Class', vesselClass), to('IMO Number', imo), to('MMSI', mmsi), to('DWT (Deadweight)', dwt), to('Max Capacity', capacity), to('LOA x Beam', loa + ' x ' + beam), to('Current Draft', '12.4m'), to('Speed (SOG)', speed + ' knots'), to('Course / Heading', cog + '\xB0 / ' + heading + '\xB0'), to('Est. Fuel Cons.', fuelCons), to('Port Compatibility', portCompat), to('Est. Freight Cost', estFreight), to('Last Signal', formattedTimestamp)]);
       // Inline function 'react.dom.html.ReactHTML.div' call
       // Inline function 'react.IntrinsicType' call
       // Inline function 'js.reflect.unsafeCast' call
@@ -26192,31 +26246,6 @@
       // Inline function 'react.ChildrenBuilder.invoke' call
       var block = VesselEngineScreen$lambda$lambda$lambda$lambda$lambda$lambda_13(vName, vStatus);
       addChild($this$div, 'div', block);
-      var tmp37_safe_receiver = positionData == null ? null : positionData.vessel_class;
-      var tmp38_elvis_lhs = tmp37_safe_receiver == null ? null : toString(tmp37_safe_receiver);
-      var vesselClass = tmp38_elvis_lhs == null ? 'Panamax' : tmp38_elvis_lhs;
-      var tmp40_safe_receiver = positionData == null ? null : positionData.dwt;
-      var tmp41_elvis_lhs = tmp40_safe_receiver == null ? null : toString(tmp40_safe_receiver);
-      var dwt = tmp41_elvis_lhs == null ? '82,000 mt' : tmp41_elvis_lhs;
-      var tmp43_safe_receiver = positionData == null ? null : positionData.loa;
-      var tmp44_elvis_lhs = tmp43_safe_receiver == null ? null : toString(tmp43_safe_receiver);
-      var loa = tmp44_elvis_lhs == null ? '229m' : tmp44_elvis_lhs;
-      var tmp46_safe_receiver = positionData == null ? null : positionData.beam;
-      var tmp47_elvis_lhs = tmp46_safe_receiver == null ? null : toString(tmp46_safe_receiver);
-      var beam = tmp47_elvis_lhs == null ? '32m' : tmp47_elvis_lhs;
-      var tmp49_safe_receiver = positionData == null ? null : positionData.cargo_capacity;
-      var tmp50_elvis_lhs = tmp49_safe_receiver == null ? null : toString(tmp49_safe_receiver);
-      var capacity = tmp50_elvis_lhs == null ? '4,500 TEU' : tmp50_elvis_lhs;
-      var tmp52_safe_receiver = positionData == null ? null : positionData.fuel_consumption;
-      var tmp53_elvis_lhs = tmp52_safe_receiver == null ? null : toString(tmp52_safe_receiver);
-      var fuelCons = tmp53_elvis_lhs == null ? '35 mt/day' : tmp53_elvis_lhs;
-      var tmp55_safe_receiver = positionData == null ? null : positionData.est_freight;
-      var tmp56_elvis_lhs = tmp55_safe_receiver == null ? null : toString(tmp55_safe_receiver);
-      var estFreight = tmp56_elvis_lhs == null ? '$4,120 / TEU' : tmp56_elvis_lhs;
-      var tmp58_safe_receiver = positionData == null ? null : positionData.port_compatibility;
-      var tmp59_elvis_lhs = tmp58_safe_receiver == null ? null : toString(tmp58_safe_receiver);
-      var portCompat = tmp59_elvis_lhs == null ? 'Verified (Draft OK)' : tmp59_elvis_lhs;
-      var details = listOf([to('Vessel Class', vesselClass), to('IMO Number', imo), to('MMSI', mmsi), to('DWT (Deadweight)', dwt), to('Max Capacity', capacity), to('LOA x Beam', loa + ' x ' + beam), to('Current Draft', '12.4m'), to('Speed (SOG)', speed + ' knots'), to('Course / Heading', cog + '\xB0 / ' + heading + '\xB0'), to('Est. Fuel Cons.', fuelCons), to('Port Compatibility', portCompat), to('Est. Freight Cost', estFreight), to('Last Signal', substringBefore(timestamp, 'T') + ' ' + substringBefore(substringAfter(timestamp, 'T'), 'Z'))]);
       // Inline function 'react.dom.html.ReactHTML.div' call
       // Inline function 'react.IntrinsicType' call
       // Inline function 'js.reflect.unsafeCast' call
