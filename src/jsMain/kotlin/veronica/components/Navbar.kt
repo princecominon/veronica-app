@@ -470,11 +470,7 @@ val Navbar = FC<NavbarProps> { props ->
                     className = cls(
                         "hidden sm:block text-sm font-medium px-4 py-2 rounded-lg transition-colors cursor-pointer",
                         textColor,
-                        if (scrolled) {
-                            "hover:bg-black/5"
-                        } else {
-                            "hover:bg-white/10"
-                        }
+                        if (scrolled) "hover:bg-black/5" else "hover:bg-white/10"
                     )
 
                     onClick = {
@@ -490,7 +486,6 @@ val Navbar = FC<NavbarProps> { props ->
                         } else {
                             window.asDynamic().logoutFirebase()
                             setUserEmail(null)
-                            window.alert("Logged out successfully!")
                         }
                     }
 
