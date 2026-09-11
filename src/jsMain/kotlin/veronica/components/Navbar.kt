@@ -1,5 +1,6 @@
 package veronica.components
 
+import kotlinx.browser.window
 import js.coroutines.awaitCancellation
 import react.ChildrenBuilder
 import react.FC
@@ -221,6 +222,8 @@ val Navbar = FC<NavbarProps> { props ->
         useState<String?>(null)
 
     val (isMobileMenuOpen, setIsMobileMenuOpen) = useState(false)
+
+    val (userEmail, setUserEmail) = useState<String?>(null)
 
     val closeTimeoutRef =
         useRef<Int>(null)
@@ -464,37 +467,39 @@ val Navbar = FC<NavbarProps> { props ->
                 }
 
                 button {
-
                     className = cls(
-                        "hidden sm:block text-sm font-medium px-4 py-2 rounded-lg transition-colors",
+                        "hidden sm:block text-sm font-medium px-4 py-2 rounded-lg transition-colors cursor-pointer",
                         textColor,
                         if (scrolled) {
                             "hover:bg-black/5"
                         } else {
                             "hover:bg-white/10"
-                        },
+                        }
                     )
 
-                    +"Sign in"
-                }
+                    onClick = {
+                        if (userEmail == null) {
+                            val promise = window.asDynamic().loginWithGoogle()
+                            promise.then { result: dynamic ->
+                                val email = result.user.email as String
+                                setUserEmail(email)
+                                window.alert("Welcome, $email!")
+                            }.catch { error: dynamic ->
+                                window.alert("Login failed: ${error.message}")
+                            }
+                        } else {
+                            window.asDynamic().logoutFirebase()
+                            setUserEmail(null)
+                            window.alert("Logged out successfully!")
+                        }
+                    }
 
-                button {
-
-                    className = ClassName(
-                        "bg-gradient-to-br from-[#3b5bfe] to-[#6d8bff] " +
-                            "text-white text-sm font-semibold px-5 py-2.5 rounded-xl " +
-                            "flex items-center gap-2 hover:shadow-lg hover:shadow-[#3b5bfe]/30 " +
-                            "transition-all duration-200 cursor-pointer"
-                    )
-
-                    +"Get a Demo"
-
-                    ArrowRight {
-                        size = 14.0
+                    if (userEmail != null) {
+                        +"Sign out"
+                    } else {
+                        +"Sign in"
                     }
                 }
-            }
-        }
     }
 
     injectStyle(
