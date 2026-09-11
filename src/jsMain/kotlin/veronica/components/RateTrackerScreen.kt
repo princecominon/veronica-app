@@ -290,10 +290,7 @@ val RateTrackerScreen = FC<RateTrackerProps> { props ->
                 val portParam = encodeQueryValue(selectedPort)
                 val regionParam = encodeQueryValue(selectedRegion)
 
-                val response = window.fetch(
-                    "http://localhost:8080/api/rates/forecast?port=$portParam&region=$regionParam",
-                    requestOptions
-                ).await()
+               val response = window.fetch("https://veronica-backend-zyyf.onrender.com/api/rates/forecast?port=$portParam&region=$regionParam", requestOptions).await()
 
                 val textData = response.text().await()
 

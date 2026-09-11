@@ -47,10 +47,7 @@ val RiskMatrixScreen = FC<RiskMatrixProps> { props ->
             try {
                 val requestOptions = json("method" to "GET").unsafeCast<RequestInit>()
 
-                val response = window.fetch(
-                    "http://localhost:8080/api/risk/$selectedPort",
-                    requestOptions
-                ).await()
+                val response = window.fetch("https://veronica-backend-zyyf.onrender.com/api/risk/$selectedPort", requestOptions).await()
 
                 if (response.ok) {
                     val textResponse = response.text().await()
