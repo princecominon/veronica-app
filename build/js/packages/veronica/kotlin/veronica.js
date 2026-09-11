@@ -14560,7 +14560,7 @@
             var portParam = encodeQueryValue(this.st_1);
             var regionParam = encodeQueryValue(this.tt_1);
             this.c6_1 = 2;
-            suspendResult = await_0(window.fetch('http://localhost:8080/api/rates/forecast?port=' + portParam + '&region=' + regionParam, requestOptions), this);
+            suspendResult = await_0(window.fetch('https://veronica-backend-zyyf.onrender.com/api/rates/forecast?port=' + portParam + '&region=' + regionParam, requestOptions), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -18224,7 +18224,7 @@
             this.d6_1 = 5;
             var requestOptions = json([to('method', 'GET')]);
             this.c6_1 = 2;
-            suspendResult = await_0(window.fetch('http://localhost:8080/api/risk/' + this.vu_1, requestOptions), this);
+            suspendResult = await_0(window.fetch('https://veronica-backend-zyyf.onrender.com/api/risk/' + this.vu_1, requestOptions), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -25793,7 +25793,7 @@
           case 3:
             var requestOptions = json([to('method', 'GET')]);
             this.c6_1 = 4;
-            suspendResult = await_0(window.fetch('http://localhost:8080/api/vessel/' + this.c10_1, requestOptions), this);
+            suspendResult = await_0(window.fetch('https://veronica-backend-zyyf.onrender.com/api/vessel/' + this.c10_1, requestOptions), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
