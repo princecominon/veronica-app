@@ -504,7 +504,6 @@ val Navbar = FC<NavbarProps> { props ->
                 opacity: 0;
                 transform: translateY(-8px) scaleY(0.88);
             }
-
             100% {
                 opacity: 1;
                 transform: translateY(0) scaleY(1);
@@ -512,11 +511,11 @@ val Navbar = FC<NavbarProps> { props ->
         }
         """.trimIndent()
     )
+    }
+    }
 }
 
-private fun ChildrenBuilder.injectStyle(
-    css: String
-) {
+private fun ChildrenBuilder.injectStyle(css: String) {
     react.dom.html.ReactHTML.style {
         +css
     }

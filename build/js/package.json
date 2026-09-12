@@ -6,8 +6,8 @@
     "packages\\veronica",
     "packages\\veronica-test",
     "packages_imported/kotlin-react/2026.9.0-19.2.8",
-    "packages_imported/kotlin-csstype/2026.9.0-3.2.3",
     "packages_imported/kotlin-cssom-core/2026.9.0",
+    "packages_imported/kotlin-csstype/2026.9.0-3.2.3",
     "packages_imported/kotlin-react-dom/2026.9.0-19.2.8"
   ],
   "devDependencies": {},

@@ -13574,6 +13574,13 @@
     // Inline function 'react.StateInstance.component2' call
     // Inline function 'kotlin.js.asDynamic' call
     var setIsMobileMenuOpen = _destruct__k2r9zo_1[1];
+    var _destruct__k2r9zo_2 = useState(null);
+    // Inline function 'react.StateInstance.component1' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var userEmail = _destruct__k2r9zo_2[0];
+    // Inline function 'react.StateInstance.component2' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var setUserEmail = _destruct__k2r9zo_2[1];
     var closeTimeoutRef = useRef(null);
     useEffectOnce(Navbar$lambda$slambda_0(setScrolled, null));
     var handleMouseEnter = Navbar$lambda$lambda(closeTimeoutRef, setOpenDropdown);
@@ -13605,9 +13612,8 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     // Inline function 'react.ChildrenBuilder.invoke' call
-    var block = Navbar$lambda$lambda_1(scrolled, props, wordmarkColor, isMobileMenuOpen, openDropdown, handleMouseEnter, handleMouseLeave, textColor, textHover, setIsMobileMenuOpen);
+    var block = Navbar$lambda$lambda_1(scrolled, props, wordmarkColor, isMobileMenuOpen, openDropdown, handleMouseEnter, handleMouseLeave, textColor, textHover, setIsMobileMenuOpen, userEmail, setUserEmail);
     addChild($this$FC, 'div', block);
-    injectStyle($this$FC, '@keyframes dd-pop-in {\n    0% {\n        opacity: 0;\n        transform: translateY(-8px) scaleY(0.88);\n    }\n\n    100% {\n        opacity: 1;\n        transform: translateY(0) scaleY(1);\n    }\n}');
     return Unit_instance;
   }
   function Navbar$lambda$slambda$lambda($setScrolled) {
@@ -13916,50 +13922,64 @@
       return Unit_instance;
     };
   }
-  function Navbar$lambda$lambda$lambda$lambda$lambda_3($textColor, $scrolled) {
-    return function ($this$button) {
-      var tmp;
-      if ($scrolled) {
-        tmp = 'hover:bg-black/5';
-      } else {
-        tmp = 'hover:bg-white/10';
-      }
-      $this$button.className = cls(['hidden sm:block text-sm font-medium px-4 py-2 rounded-lg transition-colors', $textColor, tmp]);
-      // Inline function 'react.ChildrenBuilder.unaryPlus' call
-      // Inline function 'react.ReactNode' call
-      // Inline function 'js.reflect.unsafeCast' call
-      // Inline function 'kotlin.js.unsafeCast' call
-      // Inline function 'kotlin.js.asDynamic' call
-      addChildNode($this$button, 'Sign in');
+  function Navbar$lambda$lambda$lambda$lambda$lambda$lambda$lambda_1($setUserEmail) {
+    return function (result) {
+      var tmp = result.user.email;
+      var email = (!(tmp == null) ? typeof tmp === 'string' : false) ? tmp : THROW_CCE();
+      $setUserEmail(email);
+      window.alert('Welcome, ' + email + '!');
       return Unit_instance;
     };
   }
-  function Navbar$lambda$lambda$lambda$lambda$lambda_4($this$button) {
+  function Navbar$lambda$lambda$lambda$lambda$lambda$lambda$lambda_2(error) {
     _init_properties_Navbar_kt__bnra8g();
-    // Inline function 'web.cssom.ClassName' call
-    // Inline function 'js.reflect.unsafeCast' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    $this$button.className = 'bg-gradient-to-br from-[#3b5bfe] to-[#6d8bff] text-white text-sm font-semibold px-5 py-2.5 rounded-xl flex items-center gap-2 hover:shadow-lg hover:shadow-[#3b5bfe]/30 transition-all duration-200 cursor-pointer';
-    // Inline function 'react.ChildrenBuilder.unaryPlus' call
-    // Inline function 'react.ReactNode' call
-    // Inline function 'js.reflect.unsafeCast' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    var tmp$ret$5 = 'Get a Demo';
-    addChildNode($this$button, tmp$ret$5);
-    var tmp2 = get_ArrowRight();
-    // Inline function 'react.ChildrenBuilder.invoke' call
-    var block = Navbar$lambda$lambda$lambda$lambda$lambda$lambda_4;
-    addChild($this$button, tmp2, block);
+    window.alert('Login failed: ' + error.message);
     return Unit_instance;
   }
-  function Navbar$lambda$lambda$lambda$lambda$lambda$lambda_4($this$ArrowRight) {
-    _init_properties_Navbar_kt__bnra8g();
-    $this$ArrowRight.size = 14.0;
-    return Unit_instance;
+  function Navbar$lambda$lambda$lambda$lambda$lambda$lambda_4($userEmail, $setUserEmail) {
+    return function (it) {
+      var tmp;
+      if ($userEmail == null) {
+        // Inline function 'kotlin.js.asDynamic' call
+        var promise = window.loginWithGoogle();
+        promise.then(Navbar$lambda$lambda$lambda$lambda$lambda$lambda$lambda_1($setUserEmail)).catch(Navbar$lambda$lambda$lambda$lambda$lambda$lambda$lambda_2);
+        tmp = Unit_instance;
+      } else {
+        // Inline function 'kotlin.js.asDynamic' call
+        window.logoutFirebase();
+        $setUserEmail(null);
+        tmp = Unit_instance;
+      }
+      return Unit_instance;
+    };
   }
-  function Navbar$lambda$lambda$lambda$lambda_1($textColor, $isMobileMenuOpen, $setIsMobileMenuOpen, $scrolled) {
+  function Navbar$lambda$lambda$lambda$lambda$lambda_3($textColor, $scrolled, $userEmail, $setUserEmail) {
+    return function ($this$button) {
+      $this$button.className = cls(['hidden sm:block text-sm font-medium px-4 py-2 rounded-lg transition-colors cursor-pointer', $textColor, $scrolled ? 'hover:bg-black/5' : 'hover:bg-white/10']);
+      $this$button.onClick = Navbar$lambda$lambda$lambda$lambda$lambda$lambda_4($userEmail, $setUserEmail);
+      var tmp;
+      if (!($userEmail == null)) {
+        // Inline function 'react.ChildrenBuilder.unaryPlus' call
+        // Inline function 'react.ReactNode' call
+        // Inline function 'js.reflect.unsafeCast' call
+        // Inline function 'kotlin.js.unsafeCast' call
+        // Inline function 'kotlin.js.asDynamic' call
+        var tmp$ret$1 = 'Sign out';
+        addChildNode($this$button, tmp$ret$1);
+        tmp = Unit_instance;
+      } else {
+        // Inline function 'react.ChildrenBuilder.unaryPlus' call
+        // Inline function 'react.ReactNode' call
+        // Inline function 'js.reflect.unsafeCast' call
+        // Inline function 'kotlin.js.unsafeCast' call
+        // Inline function 'kotlin.js.asDynamic' call
+        addChildNode($this$button, 'Sign in');
+        tmp = Unit_instance;
+      }
+      return Unit_instance;
+    };
+  }
+  function Navbar$lambda$lambda$lambda$lambda_1($textColor, $isMobileMenuOpen, $setIsMobileMenuOpen, $scrolled, $userEmail, $setUserEmail) {
     return function ($this$div) {
       // Inline function 'web.cssom.ClassName' call
       // Inline function 'js.reflect.unsafeCast' call
@@ -13980,20 +14000,12 @@
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
       // Inline function 'react.ChildrenBuilder.invoke' call
-      var block_0 = Navbar$lambda$lambda$lambda$lambda$lambda_3($textColor, $scrolled);
+      var block_0 = Navbar$lambda$lambda$lambda$lambda$lambda_3($textColor, $scrolled, $userEmail, $setUserEmail);
       addChild($this$div, 'button', block_0);
-      // Inline function 'react.dom.html.ReactHTML.button' call
-      // Inline function 'react.IntrinsicType' call
-      // Inline function 'js.reflect.unsafeCast' call
-      // Inline function 'kotlin.js.unsafeCast' call
-      // Inline function 'kotlin.js.asDynamic' call
-      // Inline function 'react.ChildrenBuilder.invoke' call
-      var block_1 = Navbar$lambda$lambda$lambda$lambda$lambda_4;
-      addChild($this$div, 'button', block_1);
       return Unit_instance;
     };
   }
-  function Navbar$lambda$lambda$lambda_0($props, $wordmarkColor, $isMobileMenuOpen, $openDropdown, $handleMouseEnter, $handleMouseLeave, $textColor, $textHover, $scrolled, $setIsMobileMenuOpen) {
+  function Navbar$lambda$lambda$lambda_0($props, $wordmarkColor, $isMobileMenuOpen, $openDropdown, $handleMouseEnter, $handleMouseLeave, $textColor, $textHover, $scrolled, $setIsMobileMenuOpen, $userEmail, $setUserEmail) {
     return function ($this$div) {
       // Inline function 'web.cssom.ClassName' call
       // Inline function 'js.reflect.unsafeCast' call
@@ -14022,12 +14034,13 @@
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
       // Inline function 'react.ChildrenBuilder.invoke' call
-      var block_1 = Navbar$lambda$lambda$lambda$lambda_1($textColor, $isMobileMenuOpen, $setIsMobileMenuOpen, $scrolled);
+      var block_1 = Navbar$lambda$lambda$lambda$lambda_1($textColor, $isMobileMenuOpen, $setIsMobileMenuOpen, $scrolled, $userEmail, $setUserEmail);
       addChild($this$div, 'div', block_1);
+      injectStyle($this$div, '@keyframes dd-pop-in {\n    0% {\n        opacity: 0;\n        transform: translateY(-8px) scaleY(0.88);\n    }\n    100% {\n        opacity: 1;\n        transform: translateY(0) scaleY(1);\n    }\n}');
       return Unit_instance;
     };
   }
-  function Navbar$lambda$lambda_1($scrolled, $props, $wordmarkColor, $isMobileMenuOpen, $openDropdown, $handleMouseEnter, $handleMouseLeave, $textColor, $textHover, $setIsMobileMenuOpen) {
+  function Navbar$lambda$lambda_1($scrolled, $props, $wordmarkColor, $isMobileMenuOpen, $openDropdown, $handleMouseEnter, $handleMouseLeave, $textColor, $textHover, $setIsMobileMenuOpen, $userEmail, $setUserEmail) {
     return function ($this$div) {
       var tmp;
       if ($scrolled) {
@@ -14042,7 +14055,7 @@
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
       // Inline function 'react.ChildrenBuilder.invoke' call
-      var block = Navbar$lambda$lambda$lambda_0($props, $wordmarkColor, $isMobileMenuOpen, $openDropdown, $handleMouseEnter, $handleMouseLeave, $textColor, $textHover, $scrolled, $setIsMobileMenuOpen);
+      var block = Navbar$lambda$lambda$lambda_0($props, $wordmarkColor, $isMobileMenuOpen, $openDropdown, $handleMouseEnter, $handleMouseLeave, $textColor, $textHover, $scrolled, $setIsMobileMenuOpen, $userEmail, $setUserEmail);
       addChild($this$div, 'div', block);
       return Unit_instance;
     };

@@ -94,8 +94,8 @@
   var LinkedHashSet_init_$Create$ = kotlin_kotlin.$_$.o;
   var stackTraceToString = kotlin_kotlin.$_$.k5;
   var removeFirstOrNull = kotlin_kotlin.$_$.c2;
-  var KtList = kotlin_kotlin.$_$.f1;
   var Collection = kotlin_kotlin.$_$.e1;
+  var KtList = kotlin_kotlin.$_$.f1;
   //endregion
   //region block: pre-declaration
   function cancel$default(cause, $super) {
@@ -167,7 +167,7 @@
   initMetadataForClass(Symbol, 'Symbol');
   initMetadataForClass(SetTimeoutBasedDispatcher, 'SetTimeoutBasedDispatcher', VOID, CoroutineDispatcher, VOID, [1]);
   initMetadataForObject(NodeDispatcher, 'NodeDispatcher', VOID, SetTimeoutBasedDispatcher, VOID, [1]);
-  initMetadataForClass(MessageQueue, 'MessageQueue', VOID, VOID, [KtList, Collection]);
+  initMetadataForClass(MessageQueue, 'MessageQueue', VOID, VOID, [Collection, KtList]);
   initMetadataForClass(ScheduledMessageQueue, 'ScheduledMessageQueue', VOID, MessageQueue);
   initMetadataForClass(WindowMessageQueue, 'WindowMessageQueue', VOID, MessageQueue);
   initMetadataForObject(Dispatchers, 'Dispatchers');
