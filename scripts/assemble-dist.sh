@@ -5,6 +5,7 @@ cd "$(dirname "$0")/.."
 DIST=dist
 rm -rf "$DIST"
 mkdir -p "$DIST"
-cp build/dist/js/productionExecutable/cargonex.js "$DIST/"
+# cargonex.js ko cargonex-frontend.js kar do
+cp build/dist/js/productionExecutable/cargonex-frontend.js "$DIST/"
 cp web/index.html web/styles.css web/ship.svg "$DIST/"
 echo "Static site ready in ./$DIST"
