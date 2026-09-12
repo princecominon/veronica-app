@@ -1,7 +1,7 @@
 {
-  "name": "veronica-test",
+  "name": "cargonex-frontend-test",
   "version": "0.0.0-unspecified",
-  "main": "veronica-test.js",
+  "main": "cargonex-frontend-test.js",
   "devDependencies": {
     "karma": "github:Kotlin/karma#6.4.5",
     "kotlin-web-helpers": "3.0.0",

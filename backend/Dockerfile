@@ -7,6 +7,6 @@ RUN gradle installDist --no-daemon
 # Use a lighter image to run the application
 FROM eclipse-temurin:21-jre-jammy
 RUN mkdir /app
-COPY --from=build /home/gradle/src/build/install/veronica-backend/ /app/
+COPY --from=build /home/gradle/src/build/install/cargonex-backend/ /app/
 WORKDIR /app
-CMD ["./bin/veronica-backend"]
+CMD ["./bin/cargonex-backend"]

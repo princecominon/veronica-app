@@ -1,8 +1,8 @@
 {
-  "name": "veronica",
+  "name": "cargonex",
   "private": true,
   "version": "1.0.0",
-  "description": "Veronica — AI Decision Platform for SAIL Shipping (Kotlin/JS + React port). CSS tooling only; the app itself is built with Gradle/Kotlin.",
+  "description": "Cargonex — AI Decision Platform for SAIL Shipping (Kotlin/JS + React port). CSS tooling only; the app itself is built with Gradle/Kotlin.",
   "scripts": {
     "css": "tailwindcss -c ./tailwind.config.cjs -i ./css/input.css -o ./web/styles.css --minify",
     "build": "gradle -p . jsBrowserDistribution && npm run css && bash ./scripts/assemble-dist.sh",

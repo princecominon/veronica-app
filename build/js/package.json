@@ -1,10 +1,10 @@
 {
-  "name": "veronica",
+  "name": "cargonex-frontend",
   "version": "unspecified",
   "private": true,
   "workspaces": [
-    "packages\\veronica",
-    "packages\\veronica-test",
+    "packages\\cargonex-frontend",
+    "packages\\cargonex-frontend-test",
     "packages_imported/kotlin-react/2026.9.0-19.2.8",
     "packages_imported/kotlin-cssom-core/2026.9.0",
     "packages_imported/kotlin-csstype/2026.9.0-3.2.3",

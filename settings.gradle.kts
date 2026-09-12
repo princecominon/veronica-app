@@ -1,1 +1,1 @@
-rootProject.name = "veronica"
+rootProject.name = "cargonex-frontend"

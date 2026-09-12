@@ -4,7 +4,7 @@ plugins {
     application
 }
 
-group = "com.veronica"
+group = "com.cargonex"
 version = "1.0.0"
 
 repositories {
@@ -31,7 +31,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("com.veronica.ApplicationKt")
+    mainClass.set("com.cargonex.ApplicationKt")
 }
 
 kotlin {

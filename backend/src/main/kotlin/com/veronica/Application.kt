@@ -1,4 +1,4 @@
-package com.veronica
+package com.cargonex
 
 import io.github.cdimascio.dotenv.dotenv
 import io.ktor.client.HttpClient
@@ -40,7 +40,7 @@ val env = dotenv {
     ignoreIfMissing = true
 }
 
-private val logger = LoggerFactory.getLogger("VeronicaBackend")
+private val logger = LoggerFactory.getLogger("CargonexBackend")
 
 @Serializable
 data class VendorVessel(
@@ -1349,7 +1349,7 @@ fun Application.module() {
         get("/api/health") {
 
             call.respondText(
-                """{"status":"ok","service":"Veronica API","version":"1.0.0"}""",
+                """{"status":"ok","service":"Cargonex API","version":"1.0.0"}""",
                 ContentType.Application.Json
             )
         }
